@@ -1,9 +1,12 @@
- # 🍔 Don Bruno - Menú Digital Interactivo
+# 🍔 Don Bruno - Menú Digital Interactivo
 
-Este proyecto es una aplicación web diseñada para digitalizar el menú del emprendimiento artesanal **Comidas Rápidas Don Bruno**. Desarrollado como parte de la formación en **Análisis y Desarrollo de Software (ADSO)**.
+La solución busca reducir el tiempo de respuesta en la toma de pedidos y ofrecer una experiencia visual profesional a los clientes de la zona (Bogotá).
+
+## 🚀 Ver el Proyecto en Vivo
+Puedes acceder al menú digital haciendo clic aquí:
+👉 **[Menú Digital Don Bruno](https://don-bruno-s-digital-menu.lovable.app/)**
 
 ## 🚀 Funcionalidades
-- **Catálogo Digital:** Visualización de productos artesanal (Hamburguesas, Perros, Costillas).
 - **Gestión de Pedidos:** Integración directa con WhatsApp para domicilios.
 - **Diseño Responsive:** Optimizado para dispositivos móviles.
 
@@ -11,9 +14,11 @@ Este proyecto es una aplicación web diseñada para digitalizar el menú del emp
 - **Lovable.dev:** Para la generación de la interfaz con IA.
 - **GitHub:** Para el control de versiones y despliegue.
 - **Markdown:** Para la documentación del proyecto.
+- **Node.js:** v24.15.0 (Entorno de ejecución).
 
-## 📋 Pilar del Proyecto
-La solución busca reducir el tiempo de respuesta en la toma de pedidos y ofrecer una experiencia visual profesional a los clientes de la zona (Bogotá).
+## 📋 Requisitos e Instalación Local
+Si deseas probar el proyecto en tu computadora:
 
----
-*Proyecto académico para la CUN / SENA - 2026*
+1. **Instalar dependencias:**
+   ```bash
+   npm install
