@@ -1,13 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { formatPrice } from "@/lib/menu-data";
+import { useAuth } from "@/hooks/use-auth";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({
     meta: [
       { title: "Admin — Don Bruno" },
       { name: "description", content: "Panel de administración de Comidas Rápidas Don Bruno" },
+      { name: "robots", content: "noindex" },
     ],
   }),
   component: AdminPage,
@@ -21,55 +24,82 @@ interface Order {
 }
 
 function AdminPage() {
+  const { user, isAdmin, loading, signOut } = useAuth();
+  const navigate = useNavigate();
   const [orders, setOrders] = useState<Order[]>([]);
-  const [pin, setPin] = useState("");
-  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem("donbruno_orders") || "[]");
-    setOrders(stored);
-  }, []);
+    if (!loading && !user) {
+      navigate({ to: "/auth" });
+    }
+  }, [loading, user, navigate]);
+
+  useEffect(() => {
+    if (isAdmin) {
+      const stored = JSON.parse(localStorage.getItem("donbruno_orders") || "[]");
+      setOrders(stored);
+    }
+  }, [isAdmin]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="mx-auto max-w-sm px-4 py-20 text-center text-muted-foreground">
+          Cargando...
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return null; // redirect in progress
+  }
+
+  if (!isAdmin) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="mx-auto max-w-sm px-4 py-20 text-center">
+          <p className="text-4xl">🚫</p>
+          <h1 className="mt-4 text-xl font-bold text-foreground">Acceso denegado</h1>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Tu cuenta no tiene permisos de administrador. Contacta al dueño del negocio.
+          </p>
+          <p className="mt-3 text-xs text-muted-foreground">
+            Sesión: <span className="text-foreground">{user.email}</span>
+          </p>
+          <div className="mt-6 flex flex-col gap-2">
+            <Button onClick={signOut} variant="outline" className="w-full">
+              Cerrar sesión
+            </Button>
+            <Link to="/" className="text-xs text-muted-foreground hover:text-primary">
+              ← Volver al menú
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const today = new Date().toDateString();
   const todayOrders = orders.filter((o) => new Date(o.date).toDateString() === today);
   const todayTotal = todayOrders.reduce((s, o) => s + o.total, 0);
   const allTotal = orders.reduce((s, o) => s + o.total, 0);
 
-  if (!authenticated) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <div className="mx-auto max-w-sm px-4 py-20 text-center">
-          <p className="text-4xl">🔒</p>
-          <h1 className="mt-4 text-xl font-bold text-foreground">Panel de Administración</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Ingresa el PIN para acceder</p>
-          <input
-            type="password"
-            value={pin}
-            onChange={(e) => setPin(e.target.value)}
-            placeholder="PIN"
-            className="mt-4 w-full rounded-lg border border-border bg-input px-4 py-3 text-center text-lg tracking-widest text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && pin === "1234") setAuthenticated(true);
-            }}
-          />
-          <button
-            onClick={() => { if (pin === "1234") setAuthenticated(true); }}
-            className="mt-3 w-full rounded-lg bg-primary px-4 py-3 font-bold text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Entrar
-          </button>
-          <p className="mt-2 text-xs text-muted-foreground">PIN por defecto: 1234</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="mx-auto max-w-4xl px-4 py-8">
-        <h1 className="text-2xl font-bold text-gradient-gold">📊 Panel de Administración</h1>
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-bold text-gradient-gold">📊 Panel de Administración</h1>
+            <p className="mt-1 text-xs text-muted-foreground">Conectado como {user.email}</p>
+          </div>
+          <Button onClick={signOut} variant="outline" size="sm">
+            Cerrar sesión
+          </Button>
+        </div>
 
         {/* Summary cards */}
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
