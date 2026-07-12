@@ -150,13 +150,41 @@ function IndexPage() {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-border bg-brand-dark py-8 text-center">
-        <p className="text-sm text-muted-foreground">
-          © 2026 Comidas Rápidas Don Bruno — Todos los derechos reservados
-        </p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          📞 310 289 05 06 | 318 523 06 34
-        </p>
+      <footer className="mt-12 border-t border-border bg-brand-dark">
+        <div className="mx-auto max-w-6xl px-4 py-10">
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="mb-3 text-lg font-bold text-primary">📞 Pedidos</h3>
+              <p className="text-sm text-muted-foreground">Llamadas y WhatsApp</p>
+              <div className="mt-2 space-y-1 text-sm">
+                <a href="https://wa.me/573102890506" target="_blank" rel="noreferrer" className="block text-foreground hover:text-primary">
+                  📱 310 289 0506
+                </a>
+                <a href="https://wa.me/573185230634" target="_blank" rel="noreferrer" className="block text-foreground hover:text-primary">
+                  📱 318 523 0634
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 className="mb-3 text-lg font-bold text-primary">💳 Métodos de pago</h3>
+              <ul className="space-y-1 text-sm text-muted-foreground">
+                <li>
+                  <span className="text-foreground font-medium">Nequi:</span> 310 289 0506 · llave{" "}
+                  <span className="text-foreground">@NEQUIMAU777</span>
+                </li>
+                <li>
+                  <span className="text-foreground font-medium">DaviPlata:</span> 318 523 0634 · llave{" "}
+                  <span className="text-foreground">@PLATA3185230634</span>
+                </li>
+                <li>Efectivo</li>
+                <li>Todas las billeteras digitales</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-xs text-muted-foreground">
+            © 2026 Comidas Rápidas Don Bruno — Todos los derechos reservados
+          </p>
+        </div>
       </footer>
     </div>
   );
