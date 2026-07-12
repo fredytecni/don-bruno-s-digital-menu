@@ -3,12 +3,14 @@ import chorizoAsset from "@/assets/menu-real/chorizo.jpg.asset.json";
 import perroAsset from "@/assets/menu-real/perro-americano.jpg.asset.json";
 import hamburguesaAsset from "@/assets/menu-real/hamburguesa.jpg.asset.json";
 import picadaAsset from "@/assets/menu-real/picada.jpg.asset.json";
+import alaRellenaAsset from "@/assets/menu-real/ala-rellena.jpg.asset.json";
 
 const costillas = costillasAsset.url;
 const chorizo = chorizoAsset.url;
 const perroAmericano = perroAsset.url;
 const hamburguesa = hamburguesaAsset.url;
 const picada = picadaAsset.url;
+const alaRellena = alaRellenaAsset.url;
 
 export interface MenuItem {
   id: string;
@@ -29,6 +31,7 @@ export const categories = [
   { id: "perros", name: "🌭 Perros y Choriperros", emoji: "🌭" },
   { id: "costillas", name: "🍖 Costillas de Cerdo", emoji: "🍖" },
   { id: "chorizos", name: "🌶️ Chorizo Artesanal", emoji: "🌶️" },
+  { id: "especialidades", name: "⭐ Especialidades", emoji: "⭐" },
   { id: "picadas", name: "🥘 Picadas", emoji: "🥘" },
 ];
 
@@ -102,6 +105,17 @@ export const menuItems: MenuItem[] = [
     category: "chorizos",
     emoji: "🌶️",
     image: chorizo,
+  },
+
+  // Especialidades
+  {
+    id: "e1",
+    name: "Ala Rellena Artesanal de Don Bruno",
+    description: "Ala rellena artesanal, receta especial de la casa",
+    price: 10000,
+    category: "especialidades",
+    emoji: "⭐",
+    image: alaRellena,
   },
 
   // Picadas
