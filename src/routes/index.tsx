@@ -14,8 +14,8 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Comidas Rápidas Don Bruno — Menú Digital" },
       { name: "description", content: "Hamburguesas, perros americanos, costillas BBQ y más. Pide por WhatsApp." },
-      { property: "og:title", content: "Comidas Rápidas Don Bruno" },
-      { property: "og:description", content: "Menú digital con pedidos por WhatsApp" },
+      { property: "og:title", content: "Comidas Rápidas Don Bruno — Menú Digital" },
+      { property: "og:description", content: "Hamburguesas, perros americanos, costillas BBQ y más. Pide por WhatsApp." },
     ],
   }),
   component: IndexPage,
