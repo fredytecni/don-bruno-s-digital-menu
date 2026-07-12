@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-food.jpg";
-import logoAsset from "@/assets/menu-real/logo1.jpg.asset.json";
+import logoAsset from "@/assets/menu-real/logo2.jpg.asset.json";
 
 export function HeroSection() {
   return (
