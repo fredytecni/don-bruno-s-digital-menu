@@ -7,6 +7,7 @@ import { Cart } from "@/components/Cart";
 import { useCart } from "@/lib/cart-store";
 import { categories, menuItems } from "@/lib/menu-data";
 import { openWhatsApp } from "@/components/WhatsAppButton";
+import qrPagos from "@/assets/menu-real/qr-pagos.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -167,18 +168,28 @@ function IndexPage() {
             </div>
             <div>
               <h3 className="mb-3 text-lg font-bold text-primary">💳 Métodos de pago</h3>
-              <ul className="space-y-1 text-sm text-muted-foreground">
-                <li>
-                  <span className="text-foreground font-medium">Nequi:</span> 310 289 0506 · llave{" "}
-                  <span className="text-foreground">@NEQUIMAU777</span>
-                </li>
-                <li>
-                  <span className="text-foreground font-medium">DaviPlata:</span> 318 523 0634 · llave{" "}
-                  <span className="text-foreground">@PLATA3185230634</span>
-                </li>
-                <li>Efectivo</li>
-                <li>Todas las billeteras digitales</li>
-              </ul>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                <div className="flex-shrink-0">
+                  <img
+                    src={qrPagos.url}
+                    alt="Código QR para pagos Nequi y DaviPlata"
+                    className="h-40 w-40 rounded-lg border border-border bg-white object-contain p-2"
+                  />
+                  <p className="mt-2 text-center text-xs text-muted-foreground">Escanea para pagar</p>
+                </div>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>
+                    <span className="text-foreground font-medium">Nequi:</span> 310 289 0506 · llave{" "}
+                    <span className="text-foreground">@NEQUIMAU777</span>
+                  </li>
+                  <li>
+                    <span className="text-foreground font-medium">DaviPlata:</span> 318 523 0634 · llave{" "}
+                    <span className="text-foreground">@PLATA3185230634</span>
+                  </li>
+                  <li>Efectivo</li>
+                  <li>Todas las billeteras digitales</li>
+                </ul>
+              </div>
             </div>
           </div>
           <p className="mt-8 text-center text-xs text-muted-foreground">
