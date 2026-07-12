@@ -40,6 +40,7 @@ export const categories = [
   { id: "costillas", name: "🍖 Costillas de Cerdo", emoji: "🍖" },
   { id: "chorizos", name: "🌶️ Chorizo Artesanal", emoji: "🌶️" },
   { id: "especialidades", name: "⭐ Especialidades", emoji: "⭐" },
+  { id: "especiales-libra", name: "🎄 Especiales por Libra", emoji: "🎄" },
   { id: "picadas", name: "🥘 Picadas", emoji: "🥘" },
 ];
 
