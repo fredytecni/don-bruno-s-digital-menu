@@ -4,6 +4,10 @@ import perroAsset from "@/assets/menu-real/perro-americano.jpg.asset.json";
 import hamburguesaAsset from "@/assets/menu-real/hamburguesa.jpg.asset.json";
 import picadaAsset from "@/assets/menu-real/picada.jpg.asset.json";
 import alaRellenaAsset from "@/assets/menu-real/ala-rellena.jpg.asset.json";
+import muchachoAsset from "@/assets/menu-real/muchacho-relleno.jpg.asset.json";
+import pavoAsset from "@/assets/menu-real/pavo-relleno.jpg.asset.json";
+import pernilAsset from "@/assets/menu-real/pernil-cerdo.jpg.asset.json";
+import choriperrosAsset from "@/assets/menu-real/choriperros.jpg.asset.json";
 
 const costillas = costillasAsset.url;
 const chorizo = chorizoAsset.url;
@@ -11,6 +15,10 @@ const perroAmericano = perroAsset.url;
 const hamburguesa = hamburguesaAsset.url;
 const picada = picadaAsset.url;
 const alaRellena = alaRellenaAsset.url;
+const muchachoRelleno = muchachoAsset.url;
+const pavoRelleno = pavoAsset.url;
+const pernilCerdo = pernilAsset.url;
+const choriperros = choriperrosAsset.url;
 
 export interface MenuItem {
   id: string;
@@ -32,6 +40,7 @@ export const categories = [
   { id: "costillas", name: "🍖 Costillas de Cerdo", emoji: "🍖" },
   { id: "chorizos", name: "🌶️ Chorizo Artesanal", emoji: "🌶️" },
   { id: "especialidades", name: "⭐ Especialidades", emoji: "⭐" },
+  { id: "especiales-libra", name: "🎄 Especiales por Libra", emoji: "🎄" },
   { id: "picadas", name: "🥘 Picadas", emoji: "🥘" },
 ];
 
@@ -64,7 +73,7 @@ export const menuItems: MenuItem[] = [
     price: 12000,
     category: "perros",
     emoji: "🌭",
-    image: chorizo,
+    image: choriperros,
   },
 
   // Costillas
@@ -117,6 +126,36 @@ export const menuItems: MenuItem[] = [
     emoji: "⭐",
     image: alaRellena,
   },
+
+  // Especiales por Libra (temporada / rellenos artesanales)
+  {
+    id: "l1",
+    name: "Muchacho Relleno Artesanal",
+    description: "Muchacho relleno artesanal, receta de la casa (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🎄",
+    image: muchachoRelleno,
+  },
+  {
+    id: "l2",
+    name: "Pavo Relleno Artesanal de Don Bruno",
+    description: "Pavo relleno artesanal, ideal para celebraciones (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🦃",
+    image: pavoRelleno,
+  },
+  {
+    id: "l3",
+    name: "Pernil de Cerdo Artesanal",
+    description: "Pernil de cerdo artesanal Don Bruno (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🍖",
+    image: pernilCerdo,
+  },
+
 
   // Picadas
   {
