@@ -107,6 +107,17 @@ export const menuItems: MenuItem[] = [
     image: chorizo,
   },
 
+  // Especialidades
+  {
+    id: "e1",
+    name: "Ala Rellena Artesanal de Don Bruno",
+    description: "Ala rellena artesanal, receta especial de la casa",
+    price: 10000,
+    category: "especialidades",
+    emoji: "⭐",
+    image: alaRellena,
+  },
+
   // Picadas
   {
     id: "m1",
