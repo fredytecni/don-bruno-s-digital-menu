@@ -4,6 +4,10 @@ import perroAsset from "@/assets/menu-real/perro-americano.jpg.asset.json";
 import hamburguesaAsset from "@/assets/menu-real/hamburguesa.jpg.asset.json";
 import picadaAsset from "@/assets/menu-real/picada.jpg.asset.json";
 import alaRellenaAsset from "@/assets/menu-real/ala-rellena.jpg.asset.json";
+import muchachoAsset from "@/assets/menu-real/muchacho-relleno.jpg.asset.json";
+import pavoAsset from "@/assets/menu-real/pavo-relleno.jpg.asset.json";
+import pernilAsset from "@/assets/menu-real/pernil-cerdo.jpg.asset.json";
+import choriperrosAsset from "@/assets/menu-real/choriperros.jpg.asset.json";
 
 const costillas = costillasAsset.url;
 const chorizo = chorizoAsset.url;
@@ -11,6 +15,10 @@ const perroAmericano = perroAsset.url;
 const hamburguesa = hamburguesaAsset.url;
 const picada = picadaAsset.url;
 const alaRellena = alaRellenaAsset.url;
+const muchachoRelleno = muchachoAsset.url;
+const pavoRelleno = pavoAsset.url;
+const pernilCerdo = pernilAsset.url;
+const choriperros = choriperrosAsset.url;
 
 export interface MenuItem {
   id: string;
