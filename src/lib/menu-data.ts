@@ -73,7 +73,7 @@ export const menuItems: MenuItem[] = [
     price: 12000,
     category: "perros",
     emoji: "🌭",
-    image: chorizo,
+    image: choriperros,
   },
 
   // Costillas
