@@ -31,6 +31,7 @@ export const categories = [
   { id: "perros", name: "🌭 Perros y Choriperros", emoji: "🌭" },
   { id: "costillas", name: "🍖 Costillas de Cerdo", emoji: "🍖" },
   { id: "chorizos", name: "🌶️ Chorizo Artesanal", emoji: "🌶️" },
+  { id: "especialidades", name: "⭐ Especialidades", emoji: "⭐" },
   { id: "picadas", name: "🥘 Picadas", emoji: "🥘" },
 ];
 
