@@ -7,6 +7,7 @@ import { Cart } from "@/components/Cart";
 import { useCart } from "@/lib/cart-store";
 import { categories, menuItems } from "@/lib/menu-data";
 import { openWhatsApp } from "@/components/WhatsAppButton";
+import qrPagos from "@/assets/menu-real/qr-pagos.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
