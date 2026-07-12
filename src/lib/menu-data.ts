@@ -127,6 +127,36 @@ export const menuItems: MenuItem[] = [
     image: alaRellena,
   },
 
+  // Especiales por Libra (temporada / rellenos artesanales)
+  {
+    id: "l1",
+    name: "Muchacho Relleno Artesanal",
+    description: "Muchacho relleno artesanal, receta de la casa (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🎄",
+    image: muchachoRelleno,
+  },
+  {
+    id: "l2",
+    name: "Pavo Relleno Artesanal de Don Bruno",
+    description: "Pavo relleno artesanal, ideal para celebraciones (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🦃",
+    image: pavoRelleno,
+  },
+  {
+    id: "l3",
+    name: "Pernil de Cerdo Artesanal",
+    description: "Pernil de cerdo artesanal Don Bruno (precio por libra)",
+    price: 50000,
+    category: "especiales-libra",
+    emoji: "🍖",
+    image: pernilCerdo,
+  },
+
+
   // Picadas
   {
     id: "m1",
