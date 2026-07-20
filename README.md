@@ -4,7 +4,7 @@ La solución busca reducir el tiempo de respuesta en la toma de pedidos y ofrece
 
 ## 🚀 Ver el Proyecto en Vivo
 Puedes acceder al menú digital haciendo clic aquí:
-👉 **[Menú Digital Don Bruno](https://don-bruno-s-digital-menu.lovable.app/)**
+👉 **[Menú Digital Don Bruno](https://rebrand.ly/menu_don_bruno)**
 
 ## 🚀 Funcionalidades
 - **Gestión de Pedidos:** Integración directa con WhatsApp para domicilios.
