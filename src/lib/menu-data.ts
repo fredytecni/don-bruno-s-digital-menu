@@ -1,25 +1,3 @@
-import costillasAsset from "@/assets/menu-real/costillas.jpg.asset.json";
-import chorizoAsset from "@/assets/menu-real/chorizo.jpg.asset.json";
-import perroAsset from "@/assets/menu-real/perro-americano.jpg.asset.json";
-import hamburguesaAsset from "@/assets/menu-real/hamburguesa.jpg.asset.json";
-import picadaAsset from "@/assets/menu-real/picada.jpg.asset.json";
-import alaRellenaAsset from "@/assets/menu-real/ala-rellena.jpg.asset.json";
-import muchachoAsset from "@/assets/menu-real/muchacho-relleno.jpg.asset.json";
-import pavoAsset from "@/assets/menu-real/pavo-relleno.jpg.asset.json";
-import pernilAsset from "@/assets/menu-real/pernil-cerdo.jpg.asset.json";
-import choriperrosAsset from "@/assets/menu-real/choriperros.jpg.asset.json";
-
-const costillas = costillasAsset.url;
-const chorizo = chorizoAsset.url;
-const perroAmericano = perroAsset.url;
-const hamburguesa = hamburguesaAsset.url;
-const picada = picadaAsset.url;
-const alaRellena = alaRellenaAsset.url;
-const muchachoRelleno = muchachoAsset.url;
-const pavoRelleno = pavoAsset.url;
-const pernilCerdo = pernilAsset.url;
-const choriperros = choriperrosAsset.url;
-
 export interface MenuItem {
   id: string;
   name: string;
@@ -53,7 +31,7 @@ export const menuItems: MenuItem[] = [
     price: 12000,
     category: "hamburguesas",
     emoji: "🍔",
-    image: hamburguesa,
+    image: "/HAMBURGUESA DE CARNE ARTESANAL de DON BRUNO .jpg",
   },
 
   // Perros
@@ -64,7 +42,7 @@ export const menuItems: MenuItem[] = [
     price: 12000,
     category: "perros",
     emoji: "🌭",
-    image: perroAmericano,
+    image: "/PERRO AMERICANO con TOCINETA precio_$12.000.jpg",
   },
   {
     id: "p2",
@@ -73,7 +51,7 @@ export const menuItems: MenuItem[] = [
     price: 12000,
     category: "perros",
     emoji: "🌭",
-    image: choriperros,
+    image: "/Perros Americanos y Choriperros Artesanales.jpg",
   },
 
   // Costillas
@@ -84,7 +62,7 @@ export const menuItems: MenuItem[] = [
     price: 20000,
     category: "costillas",
     emoji: "🍖",
-    image: costillas,
+    image: "/COSTILLAS DE CERDO con papa casco a $20.000.jpg",
   },
   {
     id: "c2",
@@ -93,7 +71,7 @@ export const menuItems: MenuItem[] = [
     price: 22000,
     category: "costillas",
     emoji: "🍖",
-    image: costillas,
+    image: "/COSTILLAS DE CERDO con papa casco a $20.000 (1).jpg",
   },
 
   // Chorizos
@@ -104,7 +82,7 @@ export const menuItems: MenuItem[] = [
     price: 7000,
     category: "chorizos",
     emoji: "🌶️",
-    image: chorizo,
+    image: "/CHORIZO ARTESANAL de DON BRUNO con papa casco y guacamole_$7.000.jpg",
   },
   {
     id: "ch2",
@@ -113,7 +91,7 @@ export const menuItems: MenuItem[] = [
     price: 10000,
     category: "chorizos",
     emoji: "🌶️",
-    image: chorizo,
+    image: "/CHORIZO ARTESANAL de DON BRUNO con papa casco y guacamole_$7.000.jpg",
   },
 
   // Especialidades
@@ -124,7 +102,7 @@ export const menuItems: MenuItem[] = [
     price: 10000,
     category: "especialidades",
     emoji: "⭐",
-    image: alaRellena,
+    image: "/ALA RELLENA artesanal de DON BRUNO precio_$10.000.jpg",
   },
 
   // Especiales por Libra (temporada / rellenos artesanales)
@@ -135,7 +113,7 @@ export const menuItems: MenuItem[] = [
     price: 50000,
     category: "especiales-libra",
     emoji: "🎄",
-    image: muchachoRelleno,
+    image: "/Muchacho Relleno Artesanal $50.000 la libra_.jpg",
   },
   {
     id: "l2",
@@ -144,7 +122,7 @@ export const menuItems: MenuItem[] = [
     price: 50000,
     category: "especiales-libra",
     emoji: "🦃",
-    image: pavoRelleno,
+    image: "/Pavo Relleno Artesanal de Don Bruno.jpg",
   },
   {
     id: "l3",
@@ -153,9 +131,8 @@ export const menuItems: MenuItem[] = [
     price: 50000,
     category: "especiales-libra",
     emoji: "🍖",
-    image: pernilCerdo,
+    image: "/Pernil de Cerdo Artesanal $50.000 la libra_.jpg",
   },
-
 
   // Picadas
   {
@@ -165,7 +142,7 @@ export const menuItems: MenuItem[] = [
     price: 15000,
     category: "picadas",
     emoji: "🥘",
-    image: picada,
+    image: "/Picada chorizo artesanal con rellena artesanal+ papa casco + guacamole de DON BRUNO precio_$15.000.jpg",
   },
 ];
 
