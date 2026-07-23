@@ -105,7 +105,7 @@ export const menuItems: MenuItem[] = [
     image: "/ALA RELLENA artesanal de DON BRUNO precio_$10.000.jpg",
   },
 
-  // Especiales por Libra (temporada / rellenos artesanales)
+  // Especiales por Libra
   {
     id: "l1",
     name: "Muchacho Relleno Artesanal",
